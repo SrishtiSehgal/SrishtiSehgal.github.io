@@ -49,20 +49,26 @@
 			}
 		</style>
 	</head>
-	<style type="text/css">
-		/*// Crop thumbnail images.*/
-		/*		#gallery-img {
-		    height: 40vw;
-		    object-fit: cover;
-		    @media (min-width: 768px) {
-		      height: 25vw;
-		    }
-		    @media (min-width: 992px) {
-		      height: 18vw;
-		    }
-		  }
-		}*/
-		/*// Crop images in lightbox.*/
+	<style type="text/css">		
+	/*
+		xs (for phones - screens less than 768px wide)
+		sm (for tablets - screens equal to or greater than 768px wide)
+		md (for small laptops - screens equal to or greater than 992px wide)
+		lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+	*/
+		@media (max-width: @screen-xs) {
+		    body{font-size: 10px;}
+		}
+
+		@media (max-width: @screen-sm) {
+		    body{font-size: 14px;}
+		}
+
+
+		h5{
+		    font-size: 1.4em;
+		}    
+
 		.gallery-carousel-item {	  
 		  img {
 		    height: 60vw;
@@ -126,16 +132,21 @@
 						<a class="nav-link" href="#sideproj">Side Projects</a>
 					</li>
 
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="#ContactMe">Say Hello!</a>
+					</li> -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Say Hello!
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item fa fa-facebook" href="https://m.me/srishti.sehgal100"></a>
-							<a class="dropdown-item fa fa-skype" href="skype:srishti.seagal?userinfo"></a>
-							<a class="dropdown-item fa fa-google" href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top"></a>
-							<a class="dropdown-item fa fa-linkedin" href="https://www.linkedin.com/in/srishtisehgal/"></a>
-							<a class="dropdown-item" href="mailto:srishti.sehgal@mail.utoronto.com?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 20px; max-height: 10%;" src="email_icon.png"></a>
+							<p style="margin-left: 5%; margin-right: 5%;"> Please hover/copy link address if links do not lead you directly to me!</p>
+							<a class="dropdown-item fa fa-facebook" title="https://m.me/srishti.sehgal100" href="https://m.me/srishti.sehgal100">
+							</a>
+							<a class="dropdown-item fa fa-skype" title="srishti.seagal" href="skype:srishti.seagal?userinfo"></a>
+							<a class="dropdown-item fa fa-google" title="srishti.sehgal100@gmail.com" href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top"></a>
+							<a class="dropdown-item fa fa-linkedin" title="https://www.linkedin.com/in/srishtisehgal/" href="https://www.linkedin.com/in/srishtisehgal/"></a>
+							<a class="dropdown-item" title="srishti.sehgal@mail.utoronto.ca" href="mailto:srishti.sehgal@mail.utoronto.com?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 20px; max-height: 10%;" src="email_icon.png"></a>
 							<a class="dropdown-item" href="#ContactMe">Send Direct Message Here</a>
 						</div>
 					</li>
@@ -1197,11 +1208,15 @@
 	      	<h1>Get in touch!</h1>
 	      	<h1>I'm currently looking for any opportunities; my inbox is always open. Whether for a potential project, part-time/full-time or internship opportunity or just to say hi, I'll try my best to answer you!</h1>
 	      	<div>
-	      		<a class="fa fa-facebook" style="width: 100px; max-height: 100%;"href="https://m.me/srishti.sehgal100"></a>
-				<a class="fa fa-skype" style="width: 100px; max-height: 100%;"href="skype:srishti.seagal?userinfo"></a>
-				<a class="fa fa-google" style="width: 100px; max-height: 100%;"href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top""></a>
-				<a class="fa fa-linkedin" style="width: 100px; max-height: 100%;"href="https://www.linkedin.com/in/srishtisehgal/"></a>
-				<a href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 100px; max-height: 100%;" src="email_icon.png"></a>
+	      		<a class="fa fa-facebook" title="https://m.me/srishti.sehgal100" style="width: 100px; max-height: 100%;"href="https://m.me/srishti.sehgal100"></a>
+				
+				<a class="fa fa-skype" title="srishti.seagal" style="width: 100px; max-height: 100%;"href="skype:srishti.seagal?userinfo"></a>
+				
+				<a class="fa fa-google" title="srishti.sehgal100@gmail.com" style="width: 100px; max-height: 100%;"href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top""></a>
+				
+				<a class="fa fa-linkedin" style="width: 100px; max-height: 100%;" title="https://www.linkedin.com/in/srishtisehgal/" href="https://www.linkedin.com/in/srishtisehgal/"></a>
+
+				<a title="srishti.sehgal@mail.utoronto.ca"  href="mailto:srishti.sehgal@mail.utoronto.ca?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 100px; max-height: 100%;" src="email_icon.png"></a>
 	      	</div>
 
 	      	<div class="container">
