@@ -3,7 +3,7 @@
 	<head>
 		<!-- GENERAL SETTINGS -->
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no"> 
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<!-- JQUERY -->
@@ -55,19 +55,70 @@
 		sm (for tablets - screens equal to or greater than 768px wide)
 		md (for small laptops - screens equal to or greater than 992px wide)
 		lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+		Generally, 1em = 12pt = 16px = 100%
 	*/
-		@media (max-width: @screen-xs) {
-		    body{font-size: 10px;}
+		@media screen and (max-width: 600px) {
+		  a {
+		    font-size: 1em;
+		  }
+
+		  div.NormalSize{
+		  	display: none;
+		  }
+
+		  .title{
+		  	font-size: 1.1em;
+		  }
+
+		  .AboutMeul{
+		  	font-size: 0.5em;
+		  }
+
+		  .techp{
+		  	font-size: 0.5em;
+		  }
+
+		  .workexptitle{
+		  	font-size: 1em;
+		  }
+		  .workexpmjr{
+		  	font-size: 0.75em;
+		  }
+		  .workexpctnt{
+		  	font-size: 0.5em;
+		  }
+
 		}
 
-		@media (max-width: @screen-sm) {
-		    body{font-size: 14px;}
-		}
+		@media screen and (min-width: 600px) {
+		  a {
+		    font-size: 1.5em;
+		  }
+		  div.PhoneSize{
+		  	display: none;
+		  }
+		  .title{
+		  	font-size: 2.5em;
+		  }
 
+		  .AboutMeul{
+		  	font-size: 0.75em;
+		  }
 
-		h5{
-		    font-size: 1.4em;
-		}    
+		  .techp{
+		  	font-size: 1em;
+		  }
+
+		  .workexptitle{
+		  	font-size: 1.5em;
+		  }
+		  .workexpmjr{
+		  	font-size: 1em;
+		  }
+		  .workexpctnt{
+		  	font-size: 0.75em;
+		  }
+		}  
 
 		.gallery-carousel-item {	  
 		  img {
@@ -111,9 +162,11 @@
 	</style>
 	<body>
 		<!-- NAVIGATION BAR -->
-		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="font-size: 35px;">
+		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark"> 
+			<!-- style="font-size: 35px;" -->
 		  
-			<a class="navbar-brand" style="font-size: 40px;" href="#">NAVIGATE TO: </a>
+			<a class="navbar-brand" href="#">NAVIGATE TO: </a> 
+			<!-- style="font-size: 40px;"  -->
 		  
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
 		  	</button>
@@ -161,14 +214,15 @@
 
 		<!--JUMBOTRON -->
 		<div class="jumbotron jumbotron-fluid" style="height: 100vh; background-image: url(bkgd.jpg); background-size: cover;">
-			<div class="container container-fluid text-white bg-dark" style="margin-top: 20%;">
-				<h1 class="display-4">Hello, world!</h1>
-				<h3 class="display-1 ">My name is Srishti.</h3>
+			<div class="container container-fluid text-white bg-dark">
+				<!-- style="margin-top: 10%;" -->
+				<h1 class="display-6">Hello, world!</h1>
+				<h3 class="display-4 ">My name is Srishti.</h3>
 				<p>_______________________________________________________________________________________________________</p>
-				<h1 class="display-6 text-secondary"> Machine Learning Engineer </h1>
+				<h1 class="display-6 text-secondary" style="font-style: italic;"> Machine Learning Engineer </h1>
 				<p class="lead">You can find me eating a banana or behind a computer with a banana.</p>
-				<hr class="my-4">
-				<p class="lead" style="font-size: 45px; font-style: italic;">***Looking for Canadian or remote full-time opportunities starting May 2020.</p>
+				<hr class="my-1">
+				<p class="lead" style="font-size: 2em; font-style: italic;">***Looking for Canadian or remote full-time opportunities starting May 2020.</p>
 				<p class="lead" style="margin-top: 5%;">
 					<a class="btn btn-primary btn-lg" href="#ContactMe" style="margin-bottom: 5%;"role="button">Get in touch</a> 
 				</p>
@@ -178,34 +232,70 @@
 		<!--DESIGN -->
 		<br />&nbsp; 
 	   	<div id="AboutMeSection" class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+			</div>
+		</div>
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
 				</div>
 			</div>
 		</div>
@@ -215,13 +305,13 @@
 		<div class="container-fluid bg-info">
 			<!-- style='margin-top: 100px;'  -->
 			<div class="row">
-				<div class="col-md-6 bg-info" style="padding-top: 5%; padding-bottom: 5%;">
-					<div style="background-color: grey; border-radius: 15px 15px 0px 0px;">
-						<p style="font-weight: bold; font-size: 75px; margin-left: 2%; text-align: center; display: inline-block;">0. About Me</p>
+				<div class="col-md-6 bg-info" style="padding-top: 2%; padding-bottom: 5%;">
+					<div style="background-color: grey; border-radius: 1em 1em 0em 0em;">
+						<p class="title" style="font-weight: bold; margin-left: 2%; text-align: center; display: inline-block;">0. About Me</p>
 						<img src="close_icons.png" style="display: inline; width: 15%; float: right;margin-right: 2%;">
 		      		</div>
 					<div id="AboutMe">
-				        <ul style=" background: #212121; list-style-type:none; color: white; font-family: Courier New, Courier, monospace;font-size: 25px; padding-right: 5em; padding-left: 5em;">
+				        <ul class="AboutMeul" style=" background: #212121; list-style-type:none; color: white; font-family: Courier New, Courier, monospace; padding-right: 2em; padding-left: 2em;">
 				          <li class="liAboutMe"><br />&nbsp; </li>
 				          <li class="liAboutMe">>Srishti.greeting</li>
 				          <li class="liAboutMe" style="padding-left:3em">  >>Hello world!</li>
@@ -244,62 +334,98 @@
 				        </ul>
 			      	</div>
 			    </div>
-				<div class="col-md-6 bg-dark" style="padding-top: 5%; padding-bottom: 5%;">
-					<div class="image-cropper" style="margin-bottom: 100px;margin-top: 100px;text-align: center;margin-left: 25%;margin-right: 10%;">
+				<div class="col-md-6 bg-dark" style="padding-top: 2%; padding-bottom: 2%;">
+					<div class="image-cropper" style="text-align: center; height:50vh; width: 50vh; ">
 						<img style="height:100%;" src="me.jpg"/>
 					</div>
 					<div>
 						<a target="_blank" href="cookies.jpg">
-							<img src="cookies.jpg" style=" margin-left: 3%; display: inline; height: 20%; width: 20%;">
+							<img src="cookies.jpg" style=" margin-left: 3%; border-radius: 50%; display: inline; height: 20vh; width: 20vh;">
 						</a>
 						<a target="_blank" href="cats2.jpg">
-							<img src="cats2.jpg" style="display: inline; height: 20%; width: 20%;">
+							<img src="cats2.jpg" style="border-radius: 50%; display: inline; height: 20vh; width: 20vh;">
 						</a>
 						<a target="_blank" href="foodie.jpg">
-							<img src="foodie.jpg" style="display: inline; height: 20%; width: 20%;">
+							<img src="foodie.jpg" style="border-radius: 50%; display: inline; height: 20vh; width: 20vh;">
 						</a>
 						<a target="_blank" href="guitar.png">
-							<img src="guitar.png" style="display: inline; height: 15%; width: 15%;">
+							<img src="guitar.png" style="border-radius: 50%; display: inline; height: 20vh; width: 20vh;">
 						</a>
 						<a target="_blank" href="languages.png">
-							<img src="languages.png" style="display: inline; height: 20%; width: 20%;">
+							<img src="languages.png" style="border-radius: 50%; display: inline; height: 20vh; width: 20vh;">
 						</a>
 					</div>
 				</div>
 			</div>
 	   	</div>
 
-	   	<!--DESIGN -->
-	   	<br />&nbsp; 
-	   	<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+		<!--DESIGN -->
+		<br />&nbsp; 
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+			</div>
+		</div>
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
 				</div>
 			</div>
 		</div>
@@ -307,14 +433,13 @@
 		
 		<!-- TESTIMONIALS -->
 		<div id="carouselExampleControls" class="carousel slide bg-light" data-ride="carousel" style="padding-bottom: 5%; padding-left: 10%; padding-right: 10%;">
-			<!-- font-family: 'Open Sans', 'Droid Sans', Arial, sans-serif; -->
-			<h4 style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 5px solid #2BBBAD;">01. Testimonials</h4>
+			<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">01. Testimonials</h4>
 			<div class="carousel-inner" style="text-align: left;">
 				<div class="carousel-item active">				
 					<div class="card">
 						<div class="card-body">
 							<img class="card-img" src="msg_blue.jpg" alt="Card image">
-							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 30px; color: white;">
+							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em; color: white;">
 								<!--<h5 class="card-title">Dr.Julio Valdes</h5-->
 								<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Data Scientist</h6>
 						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
@@ -327,7 +452,7 @@
 					<div class="card">
 					 	<div class="card-body">
 					 		<img class="card-img" src="msg_blue.jpg" alt="Card image">
-					 		<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 30px;color: white;">
+					 		<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em;color: white;">
 						 		<!-- <h5 class="card-title">NAME</h5> -->
 						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Aerospace Engineer</h6>
 						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
@@ -340,7 +465,7 @@
 					<div class="card">
 						<div class="card-body">
 							<img class="card-img" src="msg_blue.jpg" alt="Card image">
-							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 30px;color: white;">
+							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em;color: white;">
 								<!-- <h5 class="card-title">NAME</h5> -->
 						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Associate Professor</h6>
 						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">University of Toronto</h6>
@@ -348,7 +473,6 @@
 					  		</div>
 					  	</div>
 					</div>
-					<!-- <img src="outdoors.jpg" class="d-block w-100" aalt="Slide 3"> -->
 				</div>
 			</div>
 			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="background-color: black; height: 20%; margin-top: 26%;">
@@ -363,148 +487,218 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
 				</div>
 			</div>
 		</div>
-		<br />&nbsp; 
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
+				</div>
+			</div>
+		</div>
+		<br />&nbsp;
 
 		<!-- TECHNICAL SKILLS -->
-		<div style="text-align: center;margin-top: 100px; margin-left: 10%;margin-right: 10%;">
-	      <h4 id="Skills" style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 2px solid #2BBBAD;">02. Technical Skills</h4>
-	      <br />&nbsp; 
-	      <p class="lead" style="font-size: 25px;"> I've worked with a wide variety of programming languages. For web applications I use PHP and Javascript. Most of my machine learning magic is done on Tensorflow and PyTorch. When I am building prototypes or working on my hobby projects I usually fall back on Python or Java.</p>
-	      <br />&nbsp;
-	      <table class='TechSkills' align="center" border="0" cellspacing="0" cellpadding="0" style="font-size: 30px; ">
+		<div style="text-align: center; margin-left: 10%;margin-right: 10%;">
+	      <h4 class="title" id="Skills" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">02. Technical Skills</h4>
+	      <p class="lead techp" > I've worked with a wide variety of programming languages. For web applications I use PHP and Javascript. Most of my machine learning magic is done on Tensorflow and PyTorch. When I am building prototypes or working on my hobby projects I usually fall back on Python or Java.</p>
+
+	      <table class='TechSkills techp' align="center" border="0" cellspacing="0" cellpadding="0">
 	        <tr>
-	          <th class='TechSkills' style="width:80px; height:70px; text-align: center;font-size: 50px; border-bottom: 5px solid #2BBBAD;  border-right: 5px solid #2BBBAD; ">Category</th>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-bottom: 5px solid #2BBBAD;" valign="middle"><br />&nbsp; </td>
-	          <th class='TechSkills' style="width:100px; height:70px; text-align: left;font-size: 50px; border-bottom: 5px solid #2BBBAD;">Examples</th>
+	          <th class='TechSkills' style="width:25% height:10%; text-align: center; border-bottom: 0.1em solid #2BBBAD;  border-right: 0.1em solid #2BBBAD; ">Category</th>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;  border-bottom: 0.1em solid #2BBBAD;" valign="middle"><br />&nbsp; </td>
+	          <th class='TechSkills' style="width:65%; height:10%; text-align: left;border-bottom: 0.1em solid #2BBBAD;">Examples</th>
 	        </tr>
 	        <tr>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Programming Languages</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Programming Languages</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">Python, Java, C, C++, Visual Basic, Verilog/Assembly, PIV, MATLAB/Simulink, Windows Command Prompt, Unix/Linux shell (bash), Arduino</td>
 	        </tr>
 	        <tr style="background-color: #eeeeee;">
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Web Technologies</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Web Technologies</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">HTML, CSS, Javascript</td>
 	        </tr>
 	        <tr>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Databases/Storage</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Databases/Storage</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' class='TechSkills' style="text-align: left;">SQL, Cassandra, MySQL, S3, Splunk, HDFS, pickle</td>
 	        </tr>
 	        <tr style="background-color: #eeeeee;">
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Commerical Software</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Commerical Software</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">Solidworks, Labview</td>
 	        </tr>
 	        <tr>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Data Analysis/Modelling</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Data Analysis/Modelling</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">pandas, numpy, scikit-learn, SciPy, Tensorflow, Tflearn, PyTorch, Caffe, Keras, Lasagne, R</td>
 	        </tr>
 	        <tr style="background-color: #eeeeee;">
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Productivity Tools</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Productivity Tools</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">git, Jupyter/IPython, vim, LaTeX</td>
 	        </tr>
 	        <tr>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Software Engineering</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Software Engineering</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">Test driven development, scalable architecture design, code review, agile development, refactorization of legacy code</td>
 	        </tr>
 	        <tr style="background-color: #eeeeee;">
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle">Machine Learning Techniques</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle">Machine Learning Techniques</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">linear/logistic regression, neural networks (for example: MLP, autoencoder, convolution, recurrent/LSTM, deep learning), Fourier Analysis, Clustering, k-NN, Random Forests, SVD, PCA, NLP, SVMs, t-SNE, isomap, classification, parallel computing</td>
 	        </tr>
 	        <tr>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;  border-right: 5px solid #2BBBAD;" valign="middle"> Other</td>
-	          <td class='TechSkills' style="width:80px; height:70px; text-align: center;" valign="middle"><br />&nbsp;</td>
+	          <td class='TechSkills' style="width:25%; height:10%; text-align: center;  border-right: 0.1em solid #2BBBAD;" valign="middle"> Other</td>
+	          <td class='TechSkills' style="width:10%; height:10%; text-align: center;" valign="middle"><br />&nbsp;</td>
 	          <td class='TechSkills' style="text-align: left;">Microsoft Office, English, French, Punjabi</td>
 	        </tr>
 	      </table>
 	    </div>
 
-	   	<!--DESIGN -->
-	   	<br />&nbsp; 
-	   	<div id="WorkExp" class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+			<!--DESIGN -->
+		<br />&nbsp; 
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+			</div>
+		</div>
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
 				</div>
 			</div>
 		</div>
 		<br />&nbsp;
 
 		<!-- WORK EXPERIENCE -->
-		<div class="container-fluid" style="margin-top: 100px; margin-left: 10%; margin-right: 10%; width:85%">
+		<div class="container-fluid" style="margin-left: 10%; margin-right: 10%; width:85%">
 			<div>
-				<h4 style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 5px solid #2BBBAD;">03. Work Experience</h4>
+				<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">03. Work Experience</h4>
 			</div>
 			<br />&nbsp;
-			
 			<!-- NRC -->
-			<div class="row" style="padding-top: 100px;">
+			<div class="row">
 				<div class="col-md-12" style="text-align: center;">
-					<p style="font-size: 40px; font-weight: bold;"> MACHINE LEARNING ENGINEER AND DATA ANALYST</p>
-					<p style="font-size: 30px;"> 	
+					<p class="workexptitle" style="font-size: 1.5em; font-weight: bold;"> MACHINE LEARNING ENGINEER AND DATA ANALYST</p>
+					<p class="workexpmjr" style="font-size: 1em;"> 	
 						Big Data
 							<span style="color:#2BBBAD">
 								&nbsp&nbsp&nbsp&nbsp&#9679&nbsp&nbsp&nbsp&nbsp
@@ -519,12 +713,12 @@
 							</span>
 						Machine Learning 
 					</p>
-					<p style="font-size: 25px;"> 
+					<p class="workexpctnt" style="font-size: 0.75em;"> 
 						Wrote modern, performant, maintainable code (Python, Java, C, C++) for a diverse array of client and internal projects. Optimized and trained deep learning (DNN) models for acceleration on GPU (CUDA) by reducing elapsed time by 85% and improved results by 30%. Applied machine learning techniques using Tensorflow, PyTorch and Caffe in system health monitoring to generate empirical models and achieve 85% accuracy. Used test-driven development techniques and software development paradigm (Agile) to develop code to automate data collection and load prediction from full- scale testing projects. This method proved to be a faster development cycle (time decrease by 80%) and contributed to an easier codebase to refactor and maintain. 
 					</p>
 				</div>
 			</div>
-			<div class="row" style="font-size: 25px; text-align: center;">
+			<div class="row workexpctnt" style="text-align: center;">
 				<div class="col-md-6">
 					<p> 
 						<span style="font-weight:bold;">
@@ -542,7 +736,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="row" style="padding-bottom: 100px;">
+			<div class="row">
 				<div class="col-md-4">
 					<a target="_blank" href="fullscaletest.jpg">
 						<img src="fullscaletest.jpg" style="border-radius: 50%; height: 100%; width: 100%;">
@@ -559,12 +753,12 @@
 					</a>
 				</div>
 			</div>
-
+			<br />&nbsp;
 			<!-- lab -->
-			<div class="row" style="padding-top: 100px;"">
+			<div class="row">
 				<div class="col-md-12" style="text-align: center;">
-					<p style="font-size: 40px; font-weight: bold;"> DATA ANALYST</p>
-					<p style="font-size: 30px;"> 	
+					<p class="workexptitle" style="font-weight: bold;"> DATA ANALYST</p>
+					<p class="workexpmjr"> 	
 						Image Processing
 							<span style="color:#2BBBAD">
 								&nbsp&nbsp&nbsp&nbsp&#9679&nbsp&nbsp&nbsp&nbsp
@@ -579,12 +773,12 @@
 							</span>
 						Research
 					</p>
-					<p style="font-size: 25px;"> 
+					<p class="workexpctnt"> 
 						Developed custom image processing, data preprocessing and visualization algorithms in Matlab, Python, and R to perform image segmentation and analyze dynamic properties like velocity of a complex fluid for an independent research project with high accuracy on 300 datasets. Organized large amounts of information and drew conclusions from research to author and publish a paper on top of a full-time course load.
 					</p>
 				</div>
 			</div>
-			<div class="row" style="font-size: 25px; text-align: center;">
+			<div class="row workexpctnt"  style="text-align: center;">
 				<div class="col-md-6">
 					<p> 
 						<span style="font-weight:bold;">
@@ -602,7 +796,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="row" style="padding-bottom: 100px;">
+			<div class="row">
 				<div class="col-md-4">
 					<a target="_blank" href="marangoni.jpg">
 						<img src="marangoni.jpg" style="border-radius: 50%; height: 100%; width: 100%;">
@@ -619,12 +813,12 @@
 					</a>
 				</div>
 			</div>
-
+			<br />&nbsp;
 			<!-- VEEP -->
-			<div class="row" style="padding-top: 100px;">
+			<div class="row">
 				<div class="col-md-12" style="text-align: center;">
-					<p style="font-size: 40px; font-weight: bold;"> BACKEND DEVELOPER</p>
-					<p style="font-size: 30px;"> 	
+					<p class="workexptitle" style="font-weight: bold;"> BACKEND DEVELOPER</p>
+					<p class="workexpmjr"> 	
 						Web Development
 							<span style="color:#2BBBAD">
 								&nbsp&nbsp&nbsp&nbsp&#9679&nbsp&nbsp&nbsp&nbsp
@@ -639,12 +833,12 @@
 							</span>
 						Agile and Test driven development (TDD)
 					</p>
-					<p style="font-size: 25px;"> 
+					<p class="workexpctnt"> 
 						In a team of four students, worked as a developer in an Agile environment to develop a unique online platform, similar to Google Docs, for the stakeholder with HTML/CSS, JavaScript and Angular while learning and successfully implementing new languages like JSON and Node.js with no prior knowledge. Designed a new and improved user-first interface resulting in increased web traffic by 25%. Experience with working with REST APIs, Git, modern UI frameworks (Material UI, Bootstrap, etc.). Strong understanding of object-oriented design. Understanding of secure software development lifecycle. Experience with automated testing. 
 					</p>
 				</div>
 			</div>
-			<div class="row" style="font-size: 25px; text-align: center;">
+			<div class="row workexpctnt" style="text-align: center;">
 				<div class="col-md-6">
 					<p> 
 						<span style="font-weight:bold;">
@@ -662,7 +856,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="row" style="padding-bottom: 100px;">
+			<div class="row">
 				<div class="col-md-6">
 					<a target="_blank" href="googledocs.png">
 						<img src="googledocs.png" style="border-radius: 50%; height: 100%; width: 100%;">
@@ -675,47 +869,84 @@
 				</div>
 			</div>
 		</div>
+		<br />&nbsp;
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="Publications" class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
 				</div>
 			</div>
 		</div>
-		<br />&nbsp; 
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
+				</div>
+			</div>
+		</div>
+		<br />&nbsp;
 
 		<!-- PUBLICATIONS -->
-		<div class="accordion" style="margin-top: 100px; margin-left: 10%; margin-right: 10%; font-size: 50px;">
-			<h4 style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 5px solid #2BBBAD;">04. Publications</h4>
-			<p  style="font-size: 25px; text-align: center;"> Through out my career, I've published in 5 journals, presented at 3 conferences and written a number of internal and client reports (not available to public). I enjoy meeting new people, discussing ideas and speaking publicly of the work I've contributed to. I am proficient in technical writing, I work well in teams and I efficient and reliable while planning or prototyping for the next project.</p>
+		<div class="accordion AboutMeul" style="margin-left: 10%; margin-right: 10%;">
+			<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">04. Publications</h4>
+			<p style="text-align: center;"> Through out my career, I've published in 5 journals, presented at 3 conferences and written a number of internal and client reports (not available to public). I enjoy meeting new people, discussing ideas and speaking publicly of the work I've contributed to. I am proficient in technical writing, I work well in teams and I efficient and reliable while planning or prototyping for the next project.</p>
 			<div class="card">
 				<div class="card-header" id="CASI">
 				  <h2 class="mb-0">
@@ -890,58 +1121,94 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="sideproj" class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
 				</div>
 			</div>
 		</div>
-		<br />&nbsp;  
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
+				</div>
+			</div>
+		</div>
+		<br />&nbsp; 
 
 		<!-- SIDE PROJECTS -->
-		<div class="container-fluid" style="margin-top: 100px; margin-left: 10%; margin-right: 10%; width: 85%;">
+		<div class="container-fluid" style="margin-left: 10%; margin-right: 10%; width: 85%;">
 			<div >
-				<h4 style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 5px solid #2BBBAD;">05. Funzies</h4>
+				<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">05. Funzies</h4>
 			</div>
 			<!-- first row -->
 			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0" style="border-radius: 50%; width: 500px; height: 500px; ">
+    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0" style="border-radius: 50%; width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%; width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%; width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%; width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
@@ -1010,16 +1277,16 @@
 			<!-- second row -->
 			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 500px; height: 500px; ">
+    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
@@ -1088,16 +1355,16 @@
 			<!-- third row -->
 			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 500px; height: 500px; ">
+    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 500px; height: 500px; ">
+					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
@@ -1167,57 +1434,97 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="ContactMe" class="container-fluid">
-			<div class="row">
-				<div class="col-md-2 bg-dark">
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2 bg-info">
+			<div class="row NormalSize">
+				<div class="col-md-1 bg-info">
 					<br />&nbsp; 
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
 				</div>
-				<div class="col-md-2 bg-info">
+				<div class="col-md-1 bg-info">
 				</div>
-				<div class="col-md-2 bg-dark">
+				<div class="col-md-1 bg-dark">
 				</div>
-				<div class="col-md-2 bg-light">
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+				<div class="col-md-1 bg-info">
+				</div>
+				<div class="col-md-1 bg-dark">
+				</div>
+				<div class="col-md-1 bg-light">
+				</div>
+			</div>
+		</div>
+	   	<div id="AboutMeSection" class="container-fluid">
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-dark">
+					<br />&nbsp; 
+				</div>
+			</div>
+			<div class="row PhoneSize">
+				<div class="col-md-12 bg-info">
+					<br />&nbsp; 
 				</div>
 			</div>
 		</div>
 		<br />&nbsp; 
 
 		<!-- END -->
-	    <div style="text-align: center;margin-top: 100px;margin-left: 10%;margin-right: 10%;">
-	    	<h4 id="Skills" style="font-weight: bold; text-align: center;font-size: 75px; border-bottom: 2px solid #2BBBAD;">06. What's Next?</h4>	    	
-	    	<br />&nbsp; 
-	      	<h1>Get in touch!</h1>
-	      	<h1>I'm currently looking for any opportunities; my inbox is always open. Whether for a potential project, part-time/full-time or internship opportunity or just to say hi, I'll try my best to answer you!</h1>
+	    <div style="text-align: center;margin-left: 10%;margin-right: 10%;">
+	    	<h4 class="title" id="Skills" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">06. What's Next?</h4>	    	
+	      	<h1 class="workexptitle">Get in touch!</h1>
+	      	<h1 class="techp">I'm currently looking for any opportunities; my inbox is always open. Whether for a potential project, part-time/full-time or internship opportunity or just to say hi, I'll try my best to answer you!</h1>
 	      	<div>
-	      		<a class="fa fa-facebook" title="https://m.me/srishti.sehgal100" style="width: 100px; max-height: 100%;"href="https://m.me/srishti.sehgal100"></a>
-				
-				<a class="fa fa-skype" title="srishti.seagal" style="width: 100px; max-height: 100%;"href="skype:srishti.seagal?userinfo"></a>
-				
-				<a class="fa fa-google" title="srishti.sehgal100@gmail.com" style="width: 100px; max-height: 100%;"href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top""></a>
-				
-				<a class="fa fa-linkedin" style="width: 100px; max-height: 100%;" title="https://www.linkedin.com/in/srishtisehgal/" href="https://www.linkedin.com/in/srishtisehgal/"></a>
+	      		<a class="fa fa-facebook" title="https://m.me/srishti.sehgal100" href="https://m.me/srishti.sehgal100"></a>
+					    	<br />&nbsp; 
 
-				<a title="srishti.sehgal@mail.utoronto.ca"  href="mailto:srishti.sehgal@mail.utoronto.ca?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 100px; max-height: 100%;" src="email_icon.png"></a>
+				<a class="fa fa-skype" title="srishti.seagal" href="skype:srishti.seagal?userinfo"></a>
+					    	<br />&nbsp; 
+
+				<a class="fa fa-google" title="srishti.sehgal100@gmail.com" href="mailto:srishti.sehgal100@gmail.com?Subject=Email%20PersonalWebsite" target="_top""></a>
+					    	<br />&nbsp; 
+
+				<a class="fa fa-linkedin" title="https://www.linkedin.com/in/srishtisehgal/" href="https://www.linkedin.com/in/srishtisehgal/"></a>
+	    	<br />&nbsp; 
+
+				<a title="srishti.sehgal@mail.utoronto.ca"  href="mailto:srishti.sehgal@mail.utoronto.ca?Subject=Email%20PersonalWebsite" target="_top"><img style="width: 5vh; max-height: 100%;" src="email_icon.png"></a>
 	      	</div>
+	    	<br />&nbsp; 
 
 	      	<div class="container">
 				<form method="POST" action="action_page.php">
