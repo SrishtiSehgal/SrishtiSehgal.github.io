@@ -50,13 +50,37 @@
 		</style>
 	</head>
 	<style type="text/css">		
-	/*
-		xs (for phones - screens less than 768px wide)
-		sm (for tablets - screens equal to or greater than 768px wide)
-		md (for small laptops - screens equal to or greater than 992px wide)
-		lg (for laptops and desktops - screens equal to or greater than 1200px wide)
-		Generally, 1em = 12pt = 16px = 100%
-	*/
+		/*
+			xs (for phones - screens less than 768px wide)
+			sm (for tablets - screens equal to or greater than 768px wide)
+			md (for small laptops - screens equal to or greater than 992px wide)
+			lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+			Generally, 1em = 12pt = 16px = 100%
+		*/
+
+		.accordionCSS {
+		  background-color: #eee;
+		  color: #444;
+		  cursor: pointer;
+		  width: 100%;
+		  border: none;
+		  text-align: left;
+		  outline: none;
+		  transition: 0.4s;
+		}
+
+		.active, .accordionCSS:hover {
+		  background-color: #ccc; 
+		}
+
+		.panel {
+		  padding: 0 1em;
+		  display: none;
+		  background-color: white;
+		  overflow: hidden;
+		}
+
+
 		@media screen and (max-width: 600px) {
 		  a {
 		    font-size: 1em;
@@ -88,6 +112,18 @@
 		  	font-size: 0.5em;
 		  }
 
+		  .gallery-carousel-item {	  
+			  img {
+			    object-fit: cover;
+			    height: 60vw;
+			  }
+			}
+
+			.accordianCSS{
+				font-size: 0.75em;
+				padding: 0.5em;
+
+			}
 		}
 
 		@media screen and (min-width: 600px) {
@@ -97,6 +133,11 @@
 		  div.PhoneSize{
 		  	display: none;
 		  }
+
+		  .pcardshow{
+		  	display: none;
+		  }
+
 		  .title{
 		  	font-size: 2.5em;
 		  }
@@ -118,17 +159,18 @@
 		  .workexpctnt{
 		  	font-size: 0.75em;
 		  }
-		}  
+		  .gallery-carousel-item {	  
+		    img {
+			    object-fit: cover;
+			    height: 350px;
+			  }
+			}
+			.accordianCSS{
+				font-size: 1em;
+				padding: 1em;
 
-		.gallery-carousel-item {	  
-		  img {
-		    height: 60vw;
-		    object-fit: cover;
-		    @media (min-width: 576px) {
-		      height: 350px;
-		    }
-		  }
-		}
+			}
+		}  
 
 		input[type=text], select, textarea {
 		  width: 100%; /* Full width */
@@ -361,7 +403,7 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="Testimonl" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -417,7 +459,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="Testimonl" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
@@ -432,62 +474,64 @@
 		<br />&nbsp; 
 		
 		<!-- TESTIMONIALS -->
-		<div id="carouselExampleControls" class="carousel slide bg-light" data-ride="carousel" style="padding-bottom: 5%; padding-left: 10%; padding-right: 10%;">
+		<div id="carouselExampleControls" class="carousel slide bg-light" data-ride="carousel" style="padding-left: 10%; padding-right: 10%;">
 			<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">01. Testimonials</h4>
-			<div class="carousel-inner" style="text-align: left;">
-				<div class="carousel-item active">				
-					<div class="card">
-						<div class="card-body">
-							<img class="card-img" src="msg_blue.jpg" alt="Card image">
-							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em; color: white;">
-								<!--<h5 class="card-title">Dr.Julio Valdes</h5-->
-								<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Data Scientist</h6>
-						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
-						    	<p class="card-text">Srishti has been a pleasure to work with. Her drive and motivation for continuous learning is always a wonderful addition to her strong aptitude for implementing and developing machine learning technologies and software programs.</p>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-3">
+						<img class="card-img " src="msg_blue.jpg" alt="Card image">
+						<img class="card-img " src="msg_grey.jpg" alt="Card image">
+						<img class="card-img pcardshow" src="msg_blue.jpg" alt="Card image">
+					</div>
+					<div class="col-md-9">
+						<div class="carousel-inner" style="text-align: left;">
+							<div class="carousel-item active">				
+								<div class="card">
+									<div class="card-body" style="font-size: 1em; margin-left: 15%; margin-right: 15%; color: black;">
+										<!--<h5 class="card-title">Dr.Julio Valdes</h5-->
+										<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Data Scientist</h6>
+								 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
+								    	<p class="card-text">Srishti has been a pleasure to work with. Her drive and motivation for continuous learning is always a wonderful addition to her strong aptitude for implementing and developing machine learning technologies and software programs.</p>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="card">
+							 		<div class="card-body" style="margin-left: 15%; margin-right: 15%; font-size: 1em;color: black;">
+								 		<!-- <h5 class="card-title">NAME</h5> -->
+								 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Aerospace Engineer</h6>
+								 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
+								    	<p class="card-text">Srishti provided great ideas and thoughtful questions. She has great integrity in her work. She is a great listener, works well independently and collaboratively. Srishti was a great addition to our community!</p>
+							    	</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="card">
+									<div class="card-body" style="margin-left: 15%; margin-right: 15%; font-size: 1em;color: black;">
+										<!-- <h5 class="card-title">NAME</h5> -->
+								 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Associate Professor</h6>
+								 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">University of Toronto</h6>
+								    	<p class="card-text">Srishti has a great mind for research and for software development. She always provided participates with meaningful discussion at team meetings and was a hard-working and reliable member of our team. She never failed to amaze me!</p>
+							  		</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="card">
-					 	<div class="card-body">
-					 		<img class="card-img" src="msg_blue.jpg" alt="Card image">
-					 		<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em;color: white;">
-						 		<!-- <h5 class="card-title">NAME</h5> -->
-						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Aerospace Engineer</h6>
-						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">National Research Council Canada</h6>
-						    	<p class="card-text">Srishti provided great ideas and thoughtful questions. She has great integrity in her work. She is a great listener, works well independently and collaboratively. Srishti was a great addition to our community!</p>
-					    	</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="card">
-						<div class="card-body">
-							<img class="card-img" src="msg_blue.jpg" alt="Card image">
-							<div class="card-img-overlay" style="margin-top: 10%; margin-left: 15%; margin-right: 15%; font-size: 1em;color: white;">
-								<!-- <h5 class="card-title">NAME</h5> -->
-						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">Associate Professor</h6>
-						 		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;">University of Toronto</h6>
-						    	<p class="card-text">Srishti has a great mind for research and for software development. She always provided participates with meaningful discussion at team meetings and was a hard-working and reliable member of our team. She never failed to amaze me!</p>
-					  		</div>
-					  	</div>
-					</div>
-				</div>
+						  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="background-color: black; height: 20%; margin-top: 20%;">
+			    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    			<span class="sr-only">Previous</span>
+			  			</a>
+			 			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="background-color: black; height: 20%; margin-top: 20%;">
+			    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    			<span class="sr-only">Next</span>
+			  			</a>
+			  		</div>
+			  	</div>
 			</div>
-			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="background-color: black; height: 20%; margin-top: 26%;">
-    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    			<span class="sr-only">Previous</span>
-  			</a>
- 			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="background-color: black; height: 20%; margin-top: 26%;">
-    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-    			<span class="sr-only">Next</span>
-  			</a>
 		</div>
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="TSkills" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -543,7 +587,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="TSkills" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
@@ -616,9 +660,9 @@
 	      </table>
 	    </div>
 
-			<!--DESIGN -->
+		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="WorkExp" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -674,7 +718,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="WorkExp" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
@@ -873,7 +917,7 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="Pubs" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -929,7 +973,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="Pubs" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
@@ -942,186 +986,167 @@
 			</div>
 		</div>
 		<br />&nbsp;
-
-		<!-- PUBLICATIONS -->
-		<div class="accordion AboutMeul" style="margin-left: 10%; margin-right: 10%;">
+		
+		<!--PUBLICATIONS -->
+		<div class="AboutMeul" style="margin-left: 10%; margin-right: 10%;">
 			<h4 class="title" style="font-weight: bold; text-align: center; border-bottom: 0.06em solid #2BBBAD;">04. Publications</h4>
 			<p style="text-align: center;"> Through out my career, I've published in 5 journals, presented at 3 conferences and written a number of internal and client reports (not available to public). I enjoy meeting new people, discussing ideas and speaking publicly of the work I've contributed to. I am proficient in technical writing, I work well in teams and I efficient and reliable while planning or prototyping for the next project.</p>
-			<div class="card">
-				<div class="card-header" id="CASI">
-				  <h2 class="mb-0">
-				    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				    	Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks
-				    </button>
-				  </h2>
-				</div>
-				<div id="collapseOne" class="collapse show" aria-labelledby="CASI" data-parent="#Publications">
-					<div class="card-body">
-					  	<h5 class="card-title">CASI</h5>
-					  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
-					  	<h6 class="card-subtitle mb-2 text-muted">June 2019 {Conference: May 2019}</h6>
-					  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
-					  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="guitar.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  	</p>
-					</div>
+
+			<button class="accordionCSS">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</button>
+			<div class="panel">
+				<div class="card-body">
+					<h5 class="card-title">Journal: Canadian Aeronautics and Space Institute</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
+					<h6 class="card-subtitle mb-2 text-muted">June 2019 {Conference: May 2019}</h6>
+					<div><a href="#" class="card-link" target="_blank">DOI</a></div>
+					<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div>
+							<img style="height:8vh; width: 8vh; border-radius: 50%;" src="me.jpg"/>
+						</div>
+					</a>
+					<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+					  	<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+					</a>
+					<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+					  	<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+					</a>
+					<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-header" id="ICAF">
-				  <h2 class="mb-0">
-				    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				    	Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks
-				    </button>
-				  </h2>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="ICAF" data-parent="#Publications">
-					<div class="card-body">
-					  	<h5 class="card-title">ICAF</h5>
-					  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
-					  	<h6 class="card-subtitle mb-2 text-muted">January 2019 {Conference: June 2019}</h6>
-					  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
-					  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="guitar.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  	</p>
-					</div>
+
+			<button class="accordionCSS">Title: ICAF</button>
+			<div class="panel">
+			  	<div class="card-body">
+					<h5 class="card-title">Journal: ICAF</h5>
+				  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
+				  	<h6 class="card-subtitle mb-2 text-muted">January 2019 {Conference: June 2019}</h6>
+				  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
+				  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div>
+							<img style="height:8vh; width: 8vh; border-radius: 50%;" src="me.jpg"/>
+						</div>
+				  	</a>
+				  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+				  	</a>
+				  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+				  	</a>
+				  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+				  	</p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-header" id="IJPRAI">
-				  <h2 class="mb-0">
-				    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				    	Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks
-				    </button>
-				  </h2>
-				</div>
-				<div id="collapseThree" class="collapse" aria-labelledby="IJPRAI" data-parent="#Publications">
-					<div class="card-body">
-					  	<h5 class="card-title">IJPRAI</h5>
-					  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
-					  	<h6 class="card-subtitle mb-2 text-muted">January 2019 {Conference: June 2019}</h6>
-					  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
-					  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="guitar.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  	</p>
-					</div>
+
+			<button class="accordionCSS">Title: IJPRAI</button>
+			<div class="panel">
+			  	<div class="card-body">
+				  	<h5 class="card-title">Journal: International Journal of Pattern Recognition and Artificial Intelligence</h5>
+				  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
+				  	<h6 class="card-subtitle mb-2 text-muted">January 2019 {Conference: June 2019}</h6>
+				  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
+				  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div>
+							<img style="height:8vh; width: 8vh; border-radius: 50%;" src="me.jpg"/>
+						</div>
+				  	</a>
+				  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+				  	</a>
+				  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+				  		<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+				  	</a>
+				  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-header" id="ASTESJ">
-				  <h2 class="mb-0">
-				    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-				    	Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks
-				    </button>
-				  </h2>
-				</div>
-				<div id="collapseFour" class="collapse" aria-labelledby="ASTESJ" data-parent="#Publications">
-					<div class="card-body">
-					  	<h5 class="card-title">ASTESJ</h5>
-					  	<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
-					  	<h6 class="card-subtitle mb-2 text-muted">November 2018</h6>
-					  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
-					  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="guitar.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  	</p>
-					</div>
+
+			<button class="accordionCSS">Title: ASTESJ</button>
+			<div class="panel">
+				<div class="card-body">
+					<h5 class="card-title">Journal: ASTESJ</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Title: Characterizing the current state of a propulsion engine: a comparison between machine learning frameworks</h6>
+					<h6 class="card-subtitle mb-2 text-muted">November 2018</h6>
+					<div><a href="#" class="card-link" target="_blank">DOI</a></div>
+					<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div>
+							<img style="height:8vh; width: 8vh; border-radius: 50%;" src="me.jpg"/>
+						</div>
+					</a>
+					<a href="https://www.researchgate.net/scientific-contributions/2088508050_Catherine_Cheung" data-toggle="tooltip" data-placement="top" title="Catherine Cheung" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+					</a>
+					<a href="https://scholar.google.ca/citations?hl=en&user=BAaDajcAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Julio Valdes" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+					</a>
+					<p class="card-text"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-header" id="Chem">
-				  <h2 class="mb-0">
-				    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-				    Capillarity and Convection-Controlled Assembly During the Spreading of Particulate Suspensions on an Air-Liquid Interface
-					</button>
-				  </h2>
-				</div>
-				<div id="collapseFive" class="collapse" aria-labelledby="Chem" data-parent="#Publications">
-					<div class="card-body">
-					  	<h5 class="card-title">Bulletin of the American Physical Society</h5>
-					  	<h6 class="card-subtitle mb-2 text-muted">Title: Capillarity and Convection-Controlled Assembly During the Spreading of Particulate Suspensions on an Air-Liquid Interface</h6>
-					  	<h6 class="card-subtitle mb-2 text-muted">March 2018</h6>
-					  	<div><a href="#" class="card-link" target="_blank">DOI</a></div>
-					  	<a href="https://www.linkedin.com/in/rajeshranjanuoft/?originalSubdomain=ca" data-toggle="tooltip" data-placement="top" title="Rajesh Ranjan" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="guitar.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<a href="https://scholar.google.ca/citations?hl=en&user=eTpA_RgAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Arun Ramachandran" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
-					  		<div class="icons-cropper">
-								<img style="height:100%;" src="contactprofile.png" class="rounded"/>
-							</div>
-					  	</a>
-					  	<p class="card-text"> Recent literature has seen an explosion of studies on the spreading of fluids on an air-liquid interface; however, none have examined the spreading characteristics of two-phase fluid materials. In this work, a drop of a concentrated suspension of PMMA particles in silicone oil was placed on an aqueous glycerol solution - air interface. Depending on the initial rate of spreading of the suspension, two outcomes were observed: the particles were either swept away by the spreading suspension, or organized into an array of two-dimensional networks. Increasing the particle size, particle volume fraction, substrate viscosity and salinity were found to promote network formation. The observations can be explained as a balance between the spreading-induced hydrodynamic forces that separate the particles from each other, and capillary attraction forces which lead to particle aggregation on the interface. These results have potential applications in printing and coating technologies, and in biology.
-					  	</p>
-					</div>
+
+			<button class="accordionCSS">Title: Capillarity and Convection-Controlled Assembly During the Spreading of Particulate Suspensions on an Air-Liquid Interface</button>
+			<div class="panel">
+				<div class="card-body">
+					<h5 class="card-title">Journal: Bulletin of the American Physical Society</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Title: Capillarity and Convection-Controlled Assembly During the Spreading of Particulate Suspensions on an Air-Liquid Interface</h6>
+					<h6 class="card-subtitle mb-2 text-muted">March 2018</h6>
+					<div><a href="#" class="card-link" target="_blank">DOI</a></div>
+					<a href="https://www.linkedin.com/in/rajeshranjanuoft/?originalSubdomain=ca" data-toggle="tooltip" data-placement="top" title="Rajesh Ranjan" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+					</a>
+					<a href="https://www.linkedin.com/in/srishtisehgal/" data-toggle="tooltip" data-placement="top" title="Srishti Sehgal" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div>
+							<img style="height:8vh; width: 8vh; border-radius: 50%;" src="me.jpg"/>
+						</div>
+					</a>
+					<a href="https://scholar.google.ca/citations?hl=en&user=eTpA_RgAAAAJ&view_op=list_works&sortby=pubdate" data-toggle="tooltip" data-placement="top" title="Arun Ramachandran" class="btn btn-outline-light" style="width:auto; height: 100%;" target="_blank">
+						<div class="icons-cropper">
+							<img style="height:100%;" src="contactprofile.png" class="rounded"/>
+						</div>
+				  	</a>
+				  	<p class="card-text"> Recent literature has seen an explosion of studies on the spreading of fluids on an air-liquid interface; however, none have examined the spreading characteristics of two-phase fluid materials. In this work, a drop of a concentrated suspension of PMMA particles in silicone oil was placed on an aqueous glycerol solution - air interface. Depending on the initial rate of spreading of the suspension, two outcomes were observed: the particles were either swept away by the spreading suspension, or organized into an array of two-dimensional networks. Increasing the particle size, particle volume fraction, substrate viscosity and salinity were found to promote network formation. The observations can be explained as a balance between the spreading-induced hydrodynamic forces that separate the particles from each other, and capillary attraction forces which lead to particle aggregation on the interface. These results have potential applications in printing and coating technologies, and in biology.
+				  	</p>
 				</div>
 			</div>
 		</div>
+		<script>
+			var acc = document.getElementsByClassName("accordionCSS");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.display === "block") {
+			      panel.style.display = "none";
+			    } else {
+			      panel.style.display = "block";
+			    }
+			  });
+			}
+		</script>
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="sideproj" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -1177,7 +1202,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="sideproj" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
@@ -1199,16 +1224,16 @@
 			<!-- first row -->
 			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0" style="border-radius: 50%; width: 25vh; height: 25vh; ">
+    				<img class="w-100" src="autoronto.png" alt="First slide" data-target="#carouselExample" data-slide-to="0" style="border-radius: 50%; width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%; width: 25vh; height: 25vh; ">
+					<img class="w-100" src="dance.jpg" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%; width: 25vh; height: 25vh; ">
+					<img class="w-100" src="funzie.jpg" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%; width: 25vh; height: 25vh; ">
+					<img class="w-100" src="GB.png" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%; width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
@@ -1230,28 +1255,28 @@
 						        </ol>
 			          			<div class="carousel-inner">
 			            			<div class="carousel-item gallery-carousel-item active">
-			              				<img class="d-block w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide">
+			              				<img class="d-block w-100" src="autoronto.png" alt="First slide">
 			              				<div class="carousel-caption d-none d-md-block">
     										<h5>Title</h5>
     										<p>hi</p>
     									</div>
 			            			</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Second slide">
+				              			<img class="d-block w-100" src="dance.jpg" alt="Second slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Third slide">
+				              			<img class="d-block w-100" src="funzie.jpg" alt="Third slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				             			<img class="d-block w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Fourth slide">
+				             			<img class="d-block w-100" src="GB.png" alt="Fourth slide">
 				             			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
@@ -1275,22 +1300,22 @@
   				</div>
 			</div>
 			<!-- second row -->
-			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
+			<div class="row" id="gallery-img2" data-toggle="modal" data-target="#exampleModal2">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
+    				<img class="w-100" src="hackathonshe.jpg" alt="First slide" data-target="#carouselExample2" data-slide-to="4"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="ltfshax.png" alt="First slide" data-target="#carouselExample2" data-slide-to="5" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="moviemachine.png" alt="First slide" data-target="#carouselExample2" data-slide-to="6" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="nsight.png" alt="First slide" data-target="#carouselExample2" data-slide-to="7" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
-			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
   				<div class="modal-dialog" role="document">
     				<div class="modal-content">
       					<div class="modal-header">
@@ -1299,48 +1324,48 @@
         					</button>
       					</div>
 				        <div class="modal-body">
-				            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+				            <div id="carouselExample2" class="carousel slide" data-ride="carousel">
 				          		<ol class="carousel-indicators">
-						           	<li data-target="#carouselExample" data-slide-to="0" class="active"></li>
-						            <li data-target="#carouselExample" data-slide-to="1"></li>
-						            <li data-target="#carouselExample" data-slide-to="2"></li>
-						            <li data-target="#carouselExample" data-slide-to="3"></li>
+						           	<li data-target="#carouselExample2" data-slide-to="4" class="active"></li>
+						            <li data-target="#carouselExample2" data-slide-to="5"></li>
+						            <li data-target="#carouselExample2" data-slide-to="6"></li>
+						            <li data-target="#carouselExample2" data-slide-to="7"></li>
 						        </ol>
 			          			<div class="carousel-inner">
 			            			<div class="carousel-item gallery-carousel-item active">
-			              				<img class="d-block w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide">
+			              				<img class="d-block w-100" src="hackathonshe.jpg" alt="First slide">
 			              				<div class="carousel-caption d-none d-md-block">
     										<h5>Title</h5>
     										<p>hi</p>
     									</div>
 			            			</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Second slide">
+				              			<img class="d-block w-100" src="ltfshax.png" alt="Second slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Third slide">
+				              			<img class="d-block w-100" src="moviemachine.png" alt="Third slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				             			<img class="d-block w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Fourth slide">
+				             			<img class="d-block w-100" src="nsight.png" alt="Fourth slide">
 				             			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 			          			</div>
-						        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+						        <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
 						            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						            <span class="sr-only">Previous</span>
 						        </a>
-						        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+						        <a class="carousel-control-next" href="#carouselExample2" role="button" data-slide="next">
 						            <span class="carousel-control-next-icon" aria-hidden="true"></span>
 						            <span class="sr-only">Next</span>
 						        </a>
@@ -1353,22 +1378,22 @@
   				</div>
 			</div>
 			<!-- third row -->
-			<div class="row" id="gallery-img" data-toggle="modal" data-target="#exampleModal">
+			<div class="row" id="gallery-img3" data-toggle="modal" data-target="#exampleModal3">
   				<div class="col-6 col-md-4 col-lg-3">
-    				<img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
+    				<img class="w-100" src="stemoutreach.jpg" alt="First slide" data-target="#carouselExample3" data-slide-to="8"  style="border-radius: 50%;width: 25vh; height: 25vh; ">
   				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="spotify.png" alt="First slide" data-target="#carouselExample3" data-slide-to="9" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="recycle.png" alt="First slide" data-target="#carouselExample3" data-slide-to="10" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 				<div class="col-6 col-md-4 col-lg-3">
-					<img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3" style="border-radius: 50%;width: 25vh; height: 25vh; ">
+					<img class="w-100" src="adblock.png" alt="First slide" data-target="#carouselExample3" data-slide-to="11" style="border-radius: 50%;width: 25vh; height: 25vh; ">
 				</div>
 			</div>
 
-			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
   				<div class="modal-dialog" role="document">
     				<div class="modal-content">
       					<div class="modal-header">
@@ -1377,48 +1402,48 @@
         					</button>
       					</div>
 				        <div class="modal-body">
-				            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+				            <div id="carouselExample3" class="carousel slide" data-ride="carousel">
 				          		<ol class="carousel-indicators">
-						           	<li data-target="#carouselExample" data-slide-to="0" class="active"></li>
-						            <li data-target="#carouselExample" data-slide-to="1"></li>
-						            <li data-target="#carouselExample" data-slide-to="2"></li>
-						            <li data-target="#carouselExample" data-slide-to="3"></li>
+						           	<li data-target="#carouselExample3" data-slide-to="8" class="active"></li>
+						            <li data-target="#carouselExample3" data-slide-to="9"></li>
+						            <li data-target="#carouselExample3" data-slide-to="10"></li>
+						            <li data-target="#carouselExample3" data-slide-to="11"></li>
 						        </ol>
 			          			<div class="carousel-inner">
 			            			<div class="carousel-item gallery-carousel-item active">
-			              				<img class="d-block w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide">
+			              				<img class="d-block w-100" src="stemoutreach.jpg" alt="First slide">
 			              				<div class="carousel-caption d-none d-md-block">
     										<h5>Title</h5>
     										<p>hi</p>
     									</div>
 			            			</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Second slide">
+				              			<img class="d-block w-100" src="spotify.png" alt="Second slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				              			<img class="d-block w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Third slide">
+				              			<img class="d-block w-100" src="recycle.png" alt="Third slide">
 				              			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 				            		<div class="carousel-item gallery-carousel-item">
-				             			<img class="d-block w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Fourth slide">
+				             			<img class="d-block w-100" src="adblock.png" alt="Fourth slide">
 				             			<div class="carousel-caption d-none d-md-block">
     										<h5>...</h5>
     										<p>...</p>
     									</div>
 				            		</div>
 			          			</div>
-						        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+						        <a class="carousel-control-prev" href="#carouselExample3" role="button" data-slide="prev">
 						            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						            <span class="sr-only">Previous</span>
 						        </a>
-						        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+						        <a class="carousel-control-next" href="#carouselExample3" role="button" data-slide="next">
 						            <span class="carousel-control-next-icon" aria-hidden="true"></span>
 						            <span class="sr-only">Next</span>
 						        </a>
@@ -1434,7 +1459,7 @@
 
 		<!--DESIGN -->
 		<br />&nbsp; 
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="ContactMe" class="container-fluid">
 			<div class="row NormalSize">
 				<div class="col-md-1 bg-dark">
 					<br />&nbsp; 
@@ -1490,7 +1515,7 @@
 				</div>
 			</div>
 		</div>
-	   	<div id="AboutMeSection" class="container-fluid">
+	   	<div id="ContactMe" class="container-fluid">
 			<div class="row PhoneSize">
 				<div class="col-md-12 bg-dark">
 					<br />&nbsp; 
