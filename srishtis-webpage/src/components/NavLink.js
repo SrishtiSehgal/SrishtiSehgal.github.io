@@ -1,10 +1,10 @@
 import React from 'react'
 
-const NavLink = (props) => {
+const NavLink = ({displayText, links}) => {
     return(
-        <div>
-            {props.children}
-        </div>
+        <li className="navLinks">
+            {displayText}
+        </li>
     )
 }
 
